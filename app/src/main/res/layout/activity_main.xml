@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.adrian.testandroid.MainActivity"
+    android:weightSum="1">
+
+    <!--EditText-ul in care introducem un sir de caractere introdus de la tastatura-->
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Write something in file"
+        android:inputType="textMultiLine" />
+
+    <!--Bineinteles un layout in care vom adauga butoanele, am folosit LinearLayout-->
+    pentru a afisa butoanele in linie orizontala.
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+
+        <!--Butonul pentru actiunea de scriere-->
+
+        <Button
+            android:id="@+id/buttonWrite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.41"
+            android:onClick="writeFile"
+            android:text="Write to file" />
+
+        <!--Butonul pentru actiunea de citire-->
+
+        <Button
+            android:id="@+id/buttonRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="readFile"
+            android:text="Read the file" />
+    </LinearLayout>
+
+    <!--TextView-ul va afisa sirul de caractere, dupa actiunea pe butonul buttonRead-->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</LinearLayout>
